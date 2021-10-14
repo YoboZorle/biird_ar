@@ -1,4 +1,5 @@
 import 'package:camera_deep_ar/camera_deep_ar.dart';
+
 // import 'package:rwa_deep_ar/rwa_deep_ar.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +33,12 @@ class _MyAppState extends State<MyApp> {
         body: Stack(
           children: [
             CameraDeepAr(
+                supportedMasks: [
+                  // Masks here
+                  // Masks.grumpycat,
+                  // Masks.bcgSeg,
+                  // Masks.dalmatian
+                ],
                 onCameraReady: (isReady) {
                   print("Camera status $isReady");
                 },
@@ -43,9 +50,9 @@ class _MyAppState extends State<MyApp> {
                 },
                 //Enter the App key generate from Deep AR
                 androidLicenceKey:
-                "84c8403157d0ea678c4dc20ca8f935e74da02a90749665f2640237a110de861debe94522c88bd014",
+                    "84c8403157d0ea678c4dc20ca8f935e74da02a90749665f2640237a110de861debe94522c88bd014",
                 iosLicenceKey:
-                "0c8e0c84ee71d4e28c7ef53ecc7a2a66e7ce83ad9e903f0f31b89d5ae37089ee019e81a0705557c3",
+                    "0c8e0c84ee71d4e28c7ef53ecc7a2a66e7ce83ad9e903f0f31b89d5ae37089ee019e81a0705557c3",
                 cameraDeepArCallback: (c) async {
                   cameraDeepArController = c;
                   setState(() {});
@@ -53,7 +60,7 @@ class _MyAppState extends State<MyApp> {
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 13),
                 //height: 250,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -76,15 +83,15 @@ class _MyAppState extends State<MyApp> {
                                 height: active ? 50 : 40,
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                    color:
-                                    active ? Colors.green : Colors.white,
+                                    color: active ? Colors.green : Colors.white,
                                     shape: BoxShape.circle),
                                 child: Text(
                                   "$p",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontSize: active ? 16 : 14,
-                                      color: Colors.black, fontWeight: FontWeight.w800),
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w800),
                                 )),
                           );
                         }),
