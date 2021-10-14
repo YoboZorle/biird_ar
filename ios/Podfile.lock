@@ -1,0 +1,22 @@
+PODS:
+  - camera_deep_ar (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - camera_deep_ar (from `.symlinks/plugins/camera_deep_ar/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  camera_deep_ar:
+    :path: ".symlinks/plugins/camera_deep_ar/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  camera_deep_ar: 4263044c46e5ec52de9bb136edf382f101e4bcef
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: fe0e1ee7f3d1f7d00b11b474b62dd62134535aea
+
+COCOAPODS: 1.10.1
